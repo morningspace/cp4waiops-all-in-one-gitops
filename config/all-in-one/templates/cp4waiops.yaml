@@ -28,6 +28,8 @@ spec:
         repoURL: https://github.com/morningspace/cp4waiops-gitops
         targetRevision: dev
         helm:
+          valueFiles:
+            - 'values-custom-sizing.yaml'
           parameters:
             - name: spec.dockerPassword
               value: '{{ .Values.cp4waiops.dockerPassword }}'
