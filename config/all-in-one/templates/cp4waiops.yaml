@@ -28,8 +28,10 @@ spec:
         repoURL: https://github.com/morningspace/cp4waiops-gitops
         targetRevision: dev
         helm:
+          {{- if eq .Values.cp4waiops.profile "x-small" }}
           valueFiles:
-            - 'values-custom-sizing.yaml'
+            - 'values.x-small.yaml'
+          {{- end }}
           parameters:
             - name: spec.dockerPassword
               value: '{{ .Values.cp4waiops.dockerPassword }}'
@@ -37,6 +39,13 @@ spec:
               value: '{{ .Values.cp4waiops.instanceName }}'
             - name: spec.cp4waiops_namespace
               value: '{{ .Values.cp4waiops.namespace }}'
+            {{- if eq .Values.cp4waiops.profile "x-small" }}
+            - name: spec.size
+              value: 'small'
+            {{- else }}
+            - name: spec.size
+              value: '{{ .Values.cp4waiops.profile }}'
+            {{- end }}
       syncPolicy:
         automated:
           prune: true

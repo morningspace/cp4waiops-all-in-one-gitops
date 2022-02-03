@@ -9,6 +9,7 @@ cp4waiops:
   instanceName: aiops-installation
   dockerPassword: REPLACE_IT
   namespace: cp4waiops
+  profile: x-small
 
 sampleapp:
   enabled: true
