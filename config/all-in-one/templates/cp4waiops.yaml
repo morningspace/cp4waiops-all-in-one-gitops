@@ -24,8 +24,8 @@ spec:
         server: '{{ `{{server}}` }}'
       project: default
       source:
-        path: config/3.2/cp4waiops
-        repoURL: https://github.com/morningspace/cp4waiops-gitops
+        path: config/cp4waiops/3.2
+        repoURL: https://github.com/morningspace/cp4waiops-sandbox
         targetRevision: dev
         helm:
           {{- if eq .Values.cp4waiops.profile "x-small" }}
@@ -33,17 +33,17 @@ spec:
             - 'values.x-small.yaml'
           {{- end }}
           parameters:
-            - name: spec.dockerPassword
+            - name: cp4waiops-3.2.spec.dockerPassword
               value: '{{ .Values.cp4waiops.dockerPassword }}'
-            - name: spec.installationName
+            - name: cp4waiops-3.2.spec.installationName
               value: '{{ .Values.cp4waiops.instanceName }}'
-            - name: spec.cp4waiops_namespace
+            - name: cp4waiops-3.2.spec.cp4waiops_namespace
               value: '{{ .Values.cp4waiops.namespace }}'
             {{- if eq .Values.cp4waiops.profile "x-small" }}
-            - name: spec.size
+            - name: cp4waiops-3.2.spec.size
               value: 'small'
             {{- else }}
-            - name: spec.size
+            - name: cp4waiops-3.2.spec.size
               value: '{{ .Values.cp4waiops.profile }}'
             {{- end }}
       syncPolicy:

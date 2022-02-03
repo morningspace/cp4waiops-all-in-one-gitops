@@ -1,0 +1,7 @@
+---
+cp4waiops-3.2:
+  spec:
+    cp4waiops_namespace: cp4waiops
+    size: small
+    dockerPassword: REPLACE_IT
+    installationName: aiops-installation
