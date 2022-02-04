@@ -277,7 +277,7 @@ spec:
     targetObjectRef:
       apiVersion: orchestrator.aiops.ibm.com/v1alpha1
       kind: Installation
-      name: {{.Values.spec.installationName}}
-      namespace: {{.Values.spec.cp4waiops_namespace}}
+      name: {{.Values.cp4waiops32.spec.installationName}}
+      namespace: {{.Values.cp4waiops32.spec.cp4waiops_namespace}}
   serviceAccountRef:
     name: resource-locker-operator-controller-manager

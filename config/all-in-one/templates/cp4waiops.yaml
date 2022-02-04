@@ -33,17 +33,17 @@ spec:
             - 'values.x-small.yaml'
           {{- end }}
           parameters:
-            - name: cp4waiops-3.2.spec.dockerPassword
+            - name: cp4waiops32.spec.dockerPassword
               value: '{{ .Values.cp4waiops.dockerPassword }}'
-            - name: cp4waiops-3.2.spec.installationName
+            - name: cp4waiops32.spec.installationName
               value: '{{ .Values.cp4waiops.instanceName }}'
-            - name: cp4waiops-3.2.spec.cp4waiops_namespace
+            - name: cp4waiops32.spec.cp4waiops_namespace
               value: '{{ .Values.cp4waiops.namespace }}'
             {{- if eq .Values.cp4waiops.profile "x-small" }}
-            - name: cp4waiops-3.2.spec.size
+            - name: cp4waiops32.spec.size
               value: 'small'
             {{- else }}
-            - name: cp4waiops-3.2.spec.size
+            - name: cp4waiops32.spec.size
               value: '{{ .Values.cp4waiops.profile }}'
             {{- end }}
       syncPolicy:

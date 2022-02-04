@@ -14,7 +14,7 @@ spec:
       apiVersion: apps/v1
       kind: Deployment
       name: aiopsedge-operator-controller-manager
-      namespace: {{.Values.spec.cp4waiops_namespace}}
+      namespace: {{.Values.cp4waiops32.spec.cp4waiops_namespace}}
   - id: aiops-ir-lifecycle-locker
     patchTemplate: |
       spec:
@@ -63,6 +63,6 @@ spec:
       apiVersion: eventprocessing.automation.ibm.com/v1beta1
       kind: EventProcessor
       name: aiops-ir-lifecycle
-      namespace: {{.Values.spec.cp4waiops_namespace}}
+      namespace: {{.Values.cp4waiops32.spec.cp4waiops_namespace}}
   serviceAccountRef:
     name: resource-locker-operator-controller-manager

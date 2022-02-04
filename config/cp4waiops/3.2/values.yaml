@@ -1,5 +1,5 @@
 ---
-cp4waiops-3.2:
+cp4waiops32:
   spec:
     cp4waiops_namespace: cp4waiops
     size: small
