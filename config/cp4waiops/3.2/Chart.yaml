@@ -25,5 +25,5 @@ appVersion: "3.2"
 
 dependencies:
 - name: cp4waiops32
-  version: 0.1.2
-  repository: https://morningspace.github.io/cp4waiops-gitops
+  version: 0.1.0
+  repository: https://ibm.github.io/cp4waiops-gitops

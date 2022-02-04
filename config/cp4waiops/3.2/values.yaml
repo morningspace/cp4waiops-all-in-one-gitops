@@ -1,7 +1,8 @@
 ---
 cp4waiops32:
   spec:
-    cp4waiops_namespace: cp4waiops
+    aiManager:
+      instanceName: aiops-installation
+      namespace: cp4waiops
     size: small
     dockerPassword: REPLACE_IT
-    installationName: aiops-installation
