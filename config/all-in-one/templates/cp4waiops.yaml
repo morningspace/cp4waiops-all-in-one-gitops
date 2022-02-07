@@ -46,6 +46,11 @@ spec:
             - name: cp4waiops32.spec.size
               value: '{{ .Values.cp4waiops.profile }}'
             {{- end }}
+      ignoreDifferences:
+        - group: orchestrator.aiops.ibm.com
+          jsonPointers:
+            - /spec/pakModules
+          kind: Installation
       syncPolicy:
         automated:
           prune: true

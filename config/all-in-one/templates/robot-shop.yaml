@@ -40,5 +40,7 @@ spec:
           prune: true
           selfHeal: true
         syncOptions:
+          - Validate=false
+          - SkipDryRunOnMissingResource=true
           - CreateNamespace=true
 {{- end }}
