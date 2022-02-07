@@ -1,17 +1,76 @@
----
+# -----------------------------------------------------------------------------
+# Argo CD parameters
+# -----------------------------------------------------------------------------
 argocd:
+
+  # The type of the cluster that Argo CD runs on, values includes:
+  # - kubernetes
+  # - openshift
   cluster: kubernetes
-  namespace: argocd
+
+  # The Argo CD namespace that can be auto-resolved based on cluster type,
+  # or you can uncomment below parameter to specificy it explicitly.
+  # namespace: argocd
+
+  # Allow apps to be deployed on the same cluster where Argo CD runs.
   allowLocalDeploy: false
-  
-cp4waiops:
+
+# -----------------------------------------------------------------------------
+# Storage parameters
+# -----------------------------------------------------------------------------
+rookceph:
+
+  # Specify whether or not to install Rook Ceph as storage used by CP4WAIOps.
   enabled: true
+  
+# -----------------------------------------------------------------------------
+# CP4WAIOps parameters
+# -----------------------------------------------------------------------------
+cp4waiops:
+
+  # Specify whether or not to install CP4WAIOps.
+  enabled: true
+
+  # The instance name of CP4WAIOps.
   instanceName: aiops-installation
-  dockerPassword: REPLACE_IT
+
+  # The namespace of CP4WAIOps.
   namespace: cp4waiops
+
+  # The password of image registry used to pull CP4WAIOps images.
+  dockerPassword: REPLACE_IT
+
+  # The CP4WAIOps deployment profile, e.g.: x-small, small, large.
   profile: x-small
 
-sampleapp:
+  # Specify whether or not to setup CP4WAIOps with sample integrations, e.g.:
+  # Humio, Kafka, Kubernetes, etc. after it is installed.
+  setup: true
+
+# -----------------------------------------------------------------------------
+# Robotshop parameters
+# -----------------------------------------------------------------------------
+robotshop:
+
+  # Specify whether or not to install Robotshop.
   enabled: true
-  clusterDomain: REPLACE_IT
-  configAIOps: true
+
+# -----------------------------------------------------------------------------
+# Humio parameters
+# -----------------------------------------------------------------------------
+humio:
+
+  # Specify whether or not to install Humio.
+  enabled: true
+
+  # The sub domain of the cluster that Humio runs on,
+  # e.g.: compile.cp.fyre.ibm.com
+  clusterSubdomain: REPLACE_IT
+
+# -----------------------------------------------------------------------------
+# Istio parameters
+# -----------------------------------------------------------------------------
+istio:
+
+  # Specify whether or not to install Istio.
+  enabled: true
