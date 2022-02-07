@@ -220,7 +220,7 @@ data:
           end
         end
         return hs
-    fyre.ibm.com/OpenShiftCluster:
+    clusters.ibm.com/OpenShiftFyre:
       health.lua: |
         hs = {}
         hs.status = "Progressing"
