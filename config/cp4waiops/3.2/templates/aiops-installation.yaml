@@ -5,7 +5,7 @@ metadata:
   namespace: resource-locker-operator
 spec:
   patches:
-  - id: aimanagermainprod-locker
+  - id: aiops-installation-locker
     patchTemplate: |
       spec:
         pakModules:
@@ -273,6 +273,8 @@ spec:
                   aimanager:
                     modelTrain:
                       maxLearners: 1
+          - name: connection
+            enabled: true
     patchType: application/merge-patch+json
     targetObjectRef:
       apiVersion: orchestrator.aiops.ibm.com/v1alpha1
