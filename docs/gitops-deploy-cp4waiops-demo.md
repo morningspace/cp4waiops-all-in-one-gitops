@@ -1,3 +1,19 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Deploying CP4WAIOps Demo Environments Using GitOps In One Click](#deploying-cp4waiops-demo-environments-using-gitops-in-one-click)
+  - [Prepare Environment](#prepare-environment)
+  - [Install Argo CD](#install-argo-cd)
+  - [Install CP4WAIOps](#install-cp4waiops)
+    - [Installation Parameters](#installation-parameters)
+  - [Access Environment](#access-environment)
+    - [CP4WAIOps](#cp4waiops)
+    - [Robot Shop](#robot-shop)
+    - [Humio](#humio)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Deploying CP4WAIOps Demo Environments Using GitOps In One Click
 
 
