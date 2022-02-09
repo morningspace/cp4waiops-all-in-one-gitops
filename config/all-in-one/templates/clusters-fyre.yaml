@@ -23,11 +23,11 @@ spec:
     helm:
       parameters:
         - name: fyre.credentials.user
-          value: '{{ .Values.provider.fyre.credentials.user }}'
+          value: '{{ .Values.cluster.provider.fyre.credentials.user }}'
         - name: fyre.credentials.token
-          value: '{{ .Values.provider.fyre.credentials.token }}'
+          value: '{{ .Values.cluster.provider.fyre.credentials.token }}'
         - name: fyre.credentials.productGroupId
-          value: '{{ .Values.provider.fyre.credentials.productGroupId }}'
+          value: '{{ .Values.cluster.provider.fyre.credentials.productGroupId }}'
         - name: argocd.namespace
           {{- if .Values.argocd.namespace }}
           value: {{ .Values.argocd.namespace }}

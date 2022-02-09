@@ -25,18 +25,16 @@ cluster:
 
   # Provider specific configuration
   provider:
-
     # Fyre configuration
     fyre:
-
-      # Fyre user Id
-      user: REPLACE_IT
-
-      # Fyre user token
-      token: REPLACE_IT
-
-      # Fyre product group Id
-      productGroupId: REPLACE_IT
+      # Fyre credentials
+      credentials:
+        # Fyre user Id
+        user: REPLACE_IT
+        # Fyre user token
+        token: REPLACE_IT
+        # Fyre product group Id
+        productGroupId: REPLACE_IT
 
 # -----------------------------------------------------------------------------
 # Storage parameters
