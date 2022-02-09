@@ -16,6 +16,29 @@ argocd:
   allowLocalDeploy: false
 
 # -----------------------------------------------------------------------------
+# Cluster parameters
+# -----------------------------------------------------------------------------
+cluster:
+
+  # Specify whether or not to provision a cluster before install CP4WAIOps.
+  enabled: false
+
+  # Provider specific configuration
+  provider:
+
+    # Fyre configuration
+    fyre:
+
+      # Fyre user Id
+      user: REPLACE_IT
+
+      # Fyre user token
+      token: REPLACE_IT
+
+      # Fyre product group Id
+      productGroupId: REPLACE_IT
+
+# -----------------------------------------------------------------------------
 # Storage parameters
 # -----------------------------------------------------------------------------
 rookceph:
