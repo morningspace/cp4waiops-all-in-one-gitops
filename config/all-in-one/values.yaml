@@ -29,11 +29,11 @@ cluster:
     fyre:
       # Fyre credentials
       credentials:
-        # Fyre user Id
+        # Fyre user id required when calling Fyre API
         user: REPLACE_IT
-        # Fyre user token
+        # Fyre user token required when calling Fyre API
         token: REPLACE_IT
-        # Fyre product group Id
+        # Fyre product group id required when calling Fyre API
         productGroupId: REPLACE_IT
 
 # -----------------------------------------------------------------------------
