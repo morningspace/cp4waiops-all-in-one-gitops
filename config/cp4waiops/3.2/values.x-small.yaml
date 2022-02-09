@@ -325,7 +325,7 @@ res:
       jobmanager:
         limits:
           cpu: 750m
-          memory: 768Mi
+          memory: 1152Mi
         requests:
           cpu: 100m
           memory: 768Mi
