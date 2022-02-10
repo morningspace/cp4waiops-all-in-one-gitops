@@ -343,7 +343,7 @@ res:
       taskmanager:
         limits:
           cpu: 1600m
-          memory: 1600Mi
+          memory: 2048Mi
         requests:
           cpu: 500m
           memory: 1200Mi
