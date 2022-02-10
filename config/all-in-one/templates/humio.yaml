@@ -30,7 +30,7 @@ spec:
         helm:
           parameters:
             - name: humio-core.openshift.host
-              value: {{ .Values.humio.clusterSubdomain }}
+              value: true
             - name: humio-fluentbit.humioReleaseName
               value: '{{ `{{name}}-humio-logging` }}'
       syncPolicy:

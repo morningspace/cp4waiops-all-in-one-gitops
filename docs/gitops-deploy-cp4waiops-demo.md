@@ -94,7 +94,6 @@ Below table summarizes the detailed meaning for each parameter:
 | cp4waiops.setup           | bool   | true               | Specify whether or not to setup CP4WAIOps with sample integrations, e.g.: Humio, Kafka, Kubernetes, etc. after it is installed.
 | robotshop.enabled         | bool   | true               | Specify whether or not to install Robotshop.
 | humio.enabled             | bool   | true               | Specify whether or not to install Humio. 
-| humio.clusterSubdomain    | string | n/a                | The sub domain of the cluster that Humio runs on, e.g.: compile.cp.fyre.ibm.com
 | istio.enabled             | bool   | true               | Specify whether or not to install Istio.
 | rookceph.enabled          | bool   | true               | Specify whether or not to install Rook Ceph as storage used by CP4WAIOps.
 
