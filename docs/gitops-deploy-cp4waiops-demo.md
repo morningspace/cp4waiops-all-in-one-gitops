@@ -4,7 +4,6 @@
 
 - [Deploying CP4WAIOps Demo Environments Using GitOps In One Click](#deploying-cp4waiops-demo-environments-using-gitops-in-one-click)
   - [Prepare Environment](#prepare-environment)
-  - [Install Argo CD](#install-argo-cd)
   - [Install CP4WAIOps](#install-cp4waiops)
     - [Installation Parameters](#installation-parameters)
   - [Access Environment](#access-environment)
@@ -39,8 +38,6 @@ Prepare an OpenShift cluster as your demo environment. If you use the extremely 
 | Robot Shop         | No       | The sample application used to demonstrate CP4WAIOps features.
 | Humio & Fluent Bit | No       | The log collector used by CP4WAIOps.
 | Istio              | No       | The service mesh used by sample application for fault injection.
-
-## Install Argo CD
 
 To deploy Argo CD, log on cluster via OpenShift console, navigate to `Operators` -> `OperatorHub`, search for `OpenShift GitOps`, then install using default settings.
 
