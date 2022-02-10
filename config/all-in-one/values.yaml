@@ -6,14 +6,14 @@ argocd:
   # The type of the cluster that Argo CD runs on, values includes:
   # - kubernetes
   # - openshift
-  cluster: kubernetes
+  cluster: openshift
 
   # The Argo CD namespace that can be auto-resolved based on cluster type,
   # or you can uncomment below parameter to specificy it explicitly.
   # namespace: argocd
 
   # Allow apps to be deployed on the same cluster where Argo CD runs.
-  allowLocalDeploy: false
+  allowLocalDeploy: true
 
 # -----------------------------------------------------------------------------
 # Cluster parameters
