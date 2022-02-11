@@ -2,13 +2,13 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Deploy CP4WAIOps Demo Environment With OpenShift Cluster Using GitOps](#deploy-cp4waiops-demo-environment-with-openshift-cluster-using-gitops)
+- [Deploy CP4WAIOps Demo Environment With OCP Using GitOps](#deploy-cp4waiops-demo-environment-with-ocp-using-gitops)
   - [Prepare Environment](#prepare-environment)
   - [Install CP4WAIOps](#install-cp4waiops)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Deploy CP4WAIOps Demo Environment With OpenShift Cluster Using GitOps
+# Deploy CP4WAIOps Demo Environment With OCP Using GitOps
 
 This tutorial will work you through the steps to provision an OpenShift cluster, then use this cluster to deploy the demo environment for Cloud Pak for Watson AIOps (CP4WAIOps) using GitOps. With this approach, you will get a fully automated experience of launching a CP4WAIOps demo environment from end to end, started from cluster provisioning, till to the demo environment deployment, and configuration. All happens automatically and is driven by GitOps.
 
