@@ -86,8 +86,8 @@ Below table summarizes the detailed meaning for each parameter:
 
 | Parameter                 | Type   | Default Value      | Description 
 | ------------------------- |--------|--------------------|-----------------------------------
-| argocd.cluster            | string | kubernetes         | The type of the cluster that Argo CD runs on, valid values: kubernetes, openshift.
-| argocd.allowLocalDeploy   | bool   | false              | Allow applications to be deployed on the same cluster where Argo CD runs.
+| argocd.cluster            | string | openshift          | The type of the cluster that Argo CD runs on, valid values: kubernetes, openshift.
+| argocd.allowLocalDeploy   | bool   | true               | Allow applications to be deployed on the same cluster where Argo CD runs.
 | cp4waiops.enabled         | bool   | true               | Specify whether or not to install CP4WAIOps.
 | cp4waiops.instanceName    | string | aiops-installation | The instance name of CP4WAIOps.
 | cp4waiops.namespace       | string | cp4waiops          | The namespace of CP4WAIOps.
