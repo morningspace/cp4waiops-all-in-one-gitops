@@ -26,6 +26,8 @@ Althouth in this tutorial, I will use the extremely small profile to demonstrate
 
 This approach has been tested and verfied on CP4WAIOps 3.2.
 
+![](images/00-demo-env.png)
+
 ## Prepare Environment
 
 Prepare an OpenShift cluster as your demo environment. If you use the extremely small profile, i.e.: the `x-small` profile, it is recommended to setup a cluster with 3 worker nodes where each node has 16 core CPU and 32GB memory. We will use this cluster to install below applications:
