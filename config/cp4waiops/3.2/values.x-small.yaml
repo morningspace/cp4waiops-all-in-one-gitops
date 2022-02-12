@@ -325,7 +325,7 @@ res:
       jobmanager:
         limits:
           cpu: 750m
-          memory: 1152Mi
+          memory: 1792Mi
         requests:
           cpu: 100m
           memory: 768Mi
@@ -343,10 +343,10 @@ res:
       taskmanager:
         limits:
           cpu: 1600m
-          memory: 2048Mi
+          memory: 3072Mi
         requests:
           cpu: 500m
-          memory: 1200Mi
+          memory: 1204Mi
       heapSize: 800mb
       managedSize: 102mb
       numberOfTaskSlots: "8"
