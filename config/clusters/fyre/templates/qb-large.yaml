@@ -9,4 +9,4 @@ spec:
   ocpVersion: "4.8.27"
   size: "large"
   argocd:
-    namespace: {{ .Values.argo.namespace }}
+    namespace: {{ .Values.argocd.namespace }}

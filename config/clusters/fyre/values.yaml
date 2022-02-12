@@ -5,5 +5,5 @@ provider:
     token: REPLACE_IT
     productGroupId: REPLACE_IT
 
-argo:
-  namespace: argocd
+argocd:
+  namespace: openshift-gitops
