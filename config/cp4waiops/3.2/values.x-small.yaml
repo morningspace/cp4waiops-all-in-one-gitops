@@ -325,7 +325,7 @@ res:
       jobmanager:
         limits:
           cpu: 750m
-          memory: 1792Mi
+          memory: 2560Mi
         requests:
           cpu: 100m
           memory: 768Mi
@@ -343,12 +343,12 @@ res:
       taskmanager:
         limits:
           cpu: 1600m
-          memory: 3072Mi
+          memory: 4096Mi
         requests:
           cpu: 500m
           memory: 2048Mi
-      heapSize: 2048mb
-      managedSize: 256mb
+      heapSize: 2816mb
+      managedSize: 352mb
       numberOfTaskSlots: "8"
 
   aiopsedgeOperator:
