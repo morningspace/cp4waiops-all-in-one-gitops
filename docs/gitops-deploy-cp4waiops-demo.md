@@ -140,7 +140,7 @@ If you set the installation parameter `cp4waiops.setup` to `true`, then you will
 To access Robot Shop, you can run below command to get the URL:
 
 ```sh
-kubectl -n robot-shop get route web -o jsonpath='{"http://"}{.spec.host}{"\n"}'
+kubectl -n istio-system get route istio-ingressgateway -o jsonpath='{"http://"}{.spec.host}{"\n"}'
 ```
 
 ![](images/11-robotshop.png)
