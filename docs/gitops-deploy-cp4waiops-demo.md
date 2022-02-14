@@ -2,7 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Deploying CP4WAIOps Demo Environments Using GitOps In One Click](#deploying-cp4waiops-demo-environments-using-gitops-in-one-click)
+- [Deploy CP4WAIOps Demo Environment In One Click Using GitOps](#deploy-cp4waiops-demo-environment-in-one-click-using-gitops)
   - [Prepare Environment](#prepare-environment)
   - [Install CP4WAIOps](#install-cp4waiops)
     - [Installation Parameters](#installation-parameters)
@@ -13,7 +13,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Deploy CP4WAIOps Demo Environment Using GitOps In One Click
+# Deploy CP4WAIOps Demo Environment In One Click Using GitOps
 
 
 This tutorial will work you through the extremely easy steps to deploy demo environment for Cloud Pak for Watson AIOps (CP4WAIOps) using GitOps. It allows you to:

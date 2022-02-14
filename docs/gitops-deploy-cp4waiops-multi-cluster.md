@@ -2,7 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Deploy CP4WAIOps Demo Environment To Multiple Clusters At Scale Using GitOps](#deploy-cp4waiops-demo-environment-to-multiple-clusters-at-scale-using-gitops)
+- [Deploy CP4WAIOps Demo Environment to Multiple Clusters Using GitOps](#deploy-cp4waiops-demo-environment-to-multiple-clusters-using-gitops)
   - [Prepare Environments](#prepare-environments)
   - [Install Argo CD And argocd CLI](#install-argo-cd-and-argocd-cli)
   - [Install CP4WAIOps](#install-cp4waiops)
@@ -11,7 +11,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Deploy CP4WAIOps Demo Environment To Multiple Clusters At Scale Using GitOps
+# Deploy CP4WAIOps Demo Environment to Multiple Clusters Using GitOps
 
 This tutorial will work you through the steps to deploy the same demo environment for Cloud Pak for Watson AIOps (CP4WAIOps) to multiple clusters using GitOps. You will see that to deploy CP4WAOps, sample application, and other dependencies to multiple clusters is extremely easy.
 
