@@ -347,8 +347,8 @@ res:
         requests:
           cpu: 500m
           memory: 2048Mi
-      heapSize: 2816mb
-      managedSize: 352mb
+      heapSize: 3328mb
+      managedSize: 416mb
       numberOfTaskSlots: "8"
 
   aiopsedgeOperator:
