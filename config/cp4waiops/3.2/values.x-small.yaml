@@ -336,8 +336,8 @@ res:
         requests:
           cpu: 100m
           memory: 256Mi
-      heapSize: 256mb
-      jvmMetaSpaceSize: 64mb
+      heapSize: 512mb
+      jvmMetaSpaceSize: 128mb
     taskmanager:
       replicas: 1
       taskmanager:
