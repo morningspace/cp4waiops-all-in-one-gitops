@@ -10,6 +10,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
 data:
+  application.instanceLabelKey: "argocd.argoproj.io/instance"
   resource.customizations: |
     argoproj.io/Application:
       health.lua: |

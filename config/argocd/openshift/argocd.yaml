@@ -9,6 +9,7 @@ metadata:
   name: openshift-gitops
   namespace: openshift-gitops
 spec:
+  applicationInstanceLabelKey: "argocd.argoproj.io/instance"
   resourceCustomizations: |
     argoproj.io/Application:
       health.lua: |
