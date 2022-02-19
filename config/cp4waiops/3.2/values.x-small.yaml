@@ -328,7 +328,7 @@ res:
           memory: 2560Mi
         requests:
           cpu: 100m
-          memory: 768Mi
+          memory: 1024Mi
       tlsproxy:
         limits:
           cpu: 500m
