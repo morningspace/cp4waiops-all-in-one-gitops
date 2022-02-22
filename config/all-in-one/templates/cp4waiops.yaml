@@ -42,9 +42,9 @@ spec:
             - name: {{ template "cp4waiops.chartName" . }}.spec.dockerPassword
               value: '{{ .Values.cp4waiops.dockerPassword }}'
             - name: {{ template "cp4waiops.chartName" . }}.spec.aiManager.instanceName
-              value: '{{ .Values.cp4waiops.instanceName }}'
+              value: '{{ .Values.cp4waiops.aimanager.instanceName }}'
             - name: {{ template "cp4waiops.chartName" . }}.spec.aiManager.namespace
-              value: '{{ .Values.cp4waiops.namespace }}'
+              value: '{{ .Values.cp4waiops.aimanager.namespace }}'
             {{- if eq .Values.cp4waiops.profile "x-small" }}
             - name: {{ template "cp4waiops.chartName" . }}.spec.aiManager.size
               value: 'small'
