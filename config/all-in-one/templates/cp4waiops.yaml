@@ -26,7 +26,7 @@ spec:
       source:
         path: {{ template "cp4waiops.configPath" . }}
         repoURL: https://github.com/morningspace/cp4waiops-sandbox
-        targetRevision: HEAD
+        targetRevision: dev
         helm:
           valueFiles:
             - values.yaml
