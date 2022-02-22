@@ -6,12 +6,51 @@ argocd:
   
 cp4waiops:
   enabled: true
-  instanceName: aiops-installation
+
+  # Specify the version of CP4WAIOps, e.g.: 3.2, 3.3, daily.
+  version: "3.2"
+
+  # The username of image registry used to pull CP4WAIOps images.
+  dockerUsername: cp
+
+  # The password of image registry used to pull CP4WAIOps images.
   dockerPassword: REPLACE_IT
   namespace: cp4waiops
   profile: x-small
 
-sampleapp:
+  # AIManager specific configuration
+  aimanager:
+    # The instance name of CP4WAIOps.
+    instanceName: aiops-installation
+    # The namespace of CP4WAIOps.
+    namespace: cp4waiops
+
+  # Specify whether or not to setup CP4WAIOps with sample integrations, e.g.:
+  # Humio, Kafka, Kubernetes, etc. after it is installed.
+  setup: true
+
+# -----------------------------------------------------------------------------
+# Robotshop parameters
+# -----------------------------------------------------------------------------
+robotshop:
+
+  # Specify whether or not to install Robotshop.
+  enabled: true
+
+# -----------------------------------------------------------------------------
+# Humio parameters
+# -----------------------------------------------------------------------------
+humio:
+
+  # Specify whether or not to install Humio.
+  enabled: true
+
+# -----------------------------------------------------------------------------
+# Istio parameters
+# -----------------------------------------------------------------------------
+istio:
+
+  # Specify whether or not to install Istio.
   enabled: true
   clusterDomain: REPLACE_IT
   configAIOps: true

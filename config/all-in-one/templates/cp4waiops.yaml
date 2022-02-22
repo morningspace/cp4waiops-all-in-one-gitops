@@ -24,26 +24,32 @@ spec:
         server: '{{ `{{server}}` }}'
       project: default
       source:
-        path: config/cp4waiops/3.2
+        path: {{ template "cp4waiops.configPath" . }}
         repoURL: https://github.com/morningspace/cp4waiops-sandbox
         targetRevision: HEAD
         helm:
-          {{- if eq .Values.cp4waiops.profile "x-small" }}
           valueFiles:
-            - 'values.x-small.yaml'
+            - values.yaml
+          {{- if eq .Values.cp4waiops.profile "x-small" }}
+            - values.x-small.yaml
+          {{- end }}
+          {{- if eq .Values.cp4waiops.version "custom-build" }}
+            - values.custom-build.yaml
           {{- end }}
           parameters:
-            - name: cp4waiops32.spec.dockerPassword
+            - name: {{ template "cp4waiops.chartName" . }}.spec.dockerUsername
+              value: '{{ .Values.cp4waiops.dockerUsername }}'
+            - name: {{ template "cp4waiops.chartName" . }}.spec.dockerPassword
               value: '{{ .Values.cp4waiops.dockerPassword }}'
-            - name: cp4waiops32.spec.aiManager.instanceName
+            - name: {{ template "cp4waiops.chartName" . }}.spec.aiManager.instanceName
               value: '{{ .Values.cp4waiops.instanceName }}'
-            - name: cp4waiops32.spec.aiManager.namespace
+            - name: {{ template "cp4waiops.chartName" . }}.spec.aiManager.namespace
               value: '{{ .Values.cp4waiops.namespace }}'
             {{- if eq .Values.cp4waiops.profile "x-small" }}
-            - name: cp4waiops32.spec.size
+            - name: {{ template "cp4waiops.chartName" . }}.spec.aiManager.size
               value: 'small'
             {{- else }}
-            - name: cp4waiops32.spec.size
+            - name: {{ template "cp4waiops.chartName" . }}.spec.aiManager.size
               value: '{{ .Values.cp4waiops.profile }}'
             {{- end }}
       syncPolicy:
