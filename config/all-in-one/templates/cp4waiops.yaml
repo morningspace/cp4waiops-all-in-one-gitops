@@ -37,6 +37,8 @@ spec:
             - values.custom-build.yaml
           {{- end }}
           parameters:
+            - name: profile
+              value: '{{ .Values.cp4waiops.profile }}'
             - name: {{ template "cp4waiops.chartName" . }}.spec.dockerUsername
               value: '{{ .Values.cp4waiops.dockerUsername }}'
             - name: {{ template "cp4waiops.chartName" . }}.spec.dockerPassword

@@ -1,4 +1,4 @@
-cp4waiops33-aimanager:
+cp4waiops33:
   spec:
     imageCatalog: hyc-katamari-cicd-team-docker-local.artifactory.swg-devops.com/katamari/relatedimages/ibm-watson-aiops-catalog:v0.1.0-20220121.1200-1b9261056
     aiManager:

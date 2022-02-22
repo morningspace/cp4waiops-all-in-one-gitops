@@ -20,10 +20,10 @@ Specify the chart name
   {{- if eq .Values.cp4waiops.version "3.2" }}
   {{- printf "cp4waiops32" -}}
   {{- else if eq .Values.cp4waiops.version "3.3" }}
-  {{- printf "cp4waiops33-aimanager" -}}
+  {{- printf "cp4waiops33" -}}
   {{- else if eq .Values.cp4waiops.version "custom-build" }}
-  {{- printf "cp4waiops33-aimanager" -}}
+  {{- printf "cp4waiops33" -}}
   {{- else }}
-  {{- printf "cp4waiops33-aimanager" -}}
+  {{- printf "cp4waiops33" -}}
   {{- end }}
 {{- end -}}

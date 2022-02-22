@@ -1,3 +1,4 @@
+{{- if eq .Values.profile "x-small" }}
 kind: ConfigMap
 apiVersion: v1
 metadata:
@@ -22,3 +23,4 @@ data:
               value: {{.Values.res.cassandra.heap.size}}
             - name: CASSANDRA_HEAP_NEWSIZE
               value: {{.Values.res.cassandra.heap.newSize}}
+{{- end }}
