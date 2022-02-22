@@ -41,6 +41,6 @@ spec:
       apiVersion: ai-manager.watson-aiops.ibm.com/v1beta1
       kind: AIManagerMainProd
       name: aimanager
-      namespace: {{.Values.cp4waiops32.spec.aiManager.namespace}}
+      namespace: {{.Values.cp4waiops33-aimanager.spec.aiManager.namespace}}
   serviceAccountRef:
     name: resource-locker-operator-controller-manager

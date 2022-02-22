@@ -2,7 +2,7 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: aiops-topology-sizing
-  namespace: {{.Values.cp4waiops32.spec.aiManager.namespace}}
+  namespace: {{.Values.cp4waiops33-aimanager.spec.aiManager.namespace}}
 data:
   asm: |
     "cassandra":

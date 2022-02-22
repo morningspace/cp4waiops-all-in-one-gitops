@@ -14,7 +14,7 @@ spec:
       apiVersion: apps/v1
       kind: Deployment
       name: ibm-nginx
-      namespace: {{.Values.cp4waiops32.spec.aiManager.namespace}}
+      namespace: {{.Values.cp4waiops33-aimanager.spec.aiManager.namespace}}
   - id: usermgmt-locker
     patchTemplate: |
       spec:
@@ -24,7 +24,7 @@ spec:
       apiVersion: apps/v1
       kind: Deployment
       name: usermgmt
-      namespace: {{.Values.cp4waiops32.spec.aiManager.namespace}}
+      namespace: {{.Values.cp4waiops33-aimanager.spec.aiManager.namespace}}
   - id: zen-core-locker
     patchTemplate: |
       spec:
@@ -34,7 +34,7 @@ spec:
       apiVersion: apps/v1
       kind: Deployment
       name: zen-core
-      namespace: {{.Values.cp4waiops32.spec.aiManager.namespace}}
+      namespace: {{.Values.cp4waiops33-aimanager.spec.aiManager.namespace}}
   - id: zen-core-api-locker
     patchTemplate: |
       spec:
@@ -44,7 +44,7 @@ spec:
       apiVersion: apps/v1
       kind: Deployment
       name: zen-core-api
-      namespace: {{.Values.cp4waiops32.spec.aiManager.namespace}}
+      namespace: {{.Values.cp4waiops33-aimanager.spec.aiManager.namespace}}
   - id: automationbase-locker
     patchTemplate: |
       spec:
@@ -129,7 +129,7 @@ spec:
       apiVersion: base.automation.ibm.com/v1beta1
       kind: AutomationBase
       name: automationbase-sample
-      namespace: {{.Values.cp4waiops32.spec.aiManager.namespace}}
+      namespace: {{.Values.cp4waiops33-aimanager.spec.aiManager.namespace}}
   - id: cp4waiops-eventprocessor-locker
     patchTemplate: |
       spec:
@@ -181,6 +181,6 @@ spec:
       apiVersion: eventprocessing.automation.ibm.com/v1beta1
       kind: EventProcessor
       name: cp4waiops-eventprocessor
-      namespace: {{.Values.cp4waiops32.spec.aiManager.namespace}}
+      namespace: {{.Values.cp4waiops33-aimanager.spec.aiManager.namespace}}
   serviceAccountRef:
     name: resource-locker-operator-controller-manager
