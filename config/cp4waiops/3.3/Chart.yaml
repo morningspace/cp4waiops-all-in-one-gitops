@@ -24,6 +24,6 @@ version: 3.3
 appVersion: "3.3"
 
 dependencies:
-- name: cp4waiops33-aimanager
+- name: cp4waiops33
   version: 0.1.1
   repository: https://morningspace.github.io/cp4waiops-gitops
