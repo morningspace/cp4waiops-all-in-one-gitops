@@ -1,4 +1,4 @@
-{{- if .Values.sampleapp.configAIOps }}
+{{- if and .Values.cp4waiops.enabled .Values.cp4waiops.setup }}
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
@@ -25,8 +25,12 @@ spec:
       project: default
       source:
         path: gitops-charts/aiops-config-operator
-        repoURL: https://github.com/morningspace/sample-app-gitops
+        repoURL: https://github.com/IBM/sample-app-gitops
         targetRevision: HEAD
+        helm:
+          parameters:
+            - name: 'humio.enabled'
+              value: '{{ .Values.humio.enabled }}'
       syncPolicy:
         automated:
           prune: true

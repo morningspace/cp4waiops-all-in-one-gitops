@@ -1,4 +1,4 @@
-{{- if .Values.sampleapp.enabled }}
+{{- if .Values.humio.enabled }}
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
@@ -25,12 +25,12 @@ spec:
       project: default
       source:
         path: gitops-charts/humio-helm-charts
-        repoURL: https://github.com/morningspace/sample-app-gitops
+        repoURL: https://github.com/IBM/sample-app-gitops
         targetRevision: HEAD
         helm:
           parameters:
             - name: humio-core.openshift.host
-              value: {{ .Values.sampleapp.clusterDomain }}
+              value: 'true'
             - name: humio-fluentbit.humioReleaseName
               value: '{{ `{{name}}-humio-logging` }}'
       syncPolicy:

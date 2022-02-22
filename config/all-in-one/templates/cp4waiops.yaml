@@ -52,6 +52,11 @@ spec:
             - name: {{ template "cp4waiops.chartName" . }}.spec.aiManager.size
               value: '{{ .Values.cp4waiops.profile }}'
             {{- end }}
+      ignoreDifferences:
+        - group: orchestrator.aiops.ibm.com
+          jsonPointers:
+            - /spec/pakModules
+          kind: Installation
       syncPolicy:
         automated:
           prune: true
