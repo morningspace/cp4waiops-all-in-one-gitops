@@ -20,7 +20,7 @@ spec:
         argocd.argoproj.io/sync-wave: "200"
     spec:
       destination:
-        namespace: '{{ .Values.cp4waiops.namespace }}'
+        namespace: '{{ .Values.cp4waiops.aimanager.namespace }}'
         server: '{{ `{{server}}` }}'
       project: default
       source:
