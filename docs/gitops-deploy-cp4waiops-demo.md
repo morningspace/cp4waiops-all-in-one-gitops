@@ -141,6 +141,7 @@ And set the installation parameters as below:
 | cp4waiops.instanceName    | aiops-installatio |
 | cp4waiops.namespace       | cp4waiops         |
 | cp4waiops.profile         | x-small           |
+| cp4waiops.version         | custom-build      |
 | cp4waiops.dockerUsername  | The username to access image registry |
 | cp4waiops.dockerPassword  | The password to access image registry |
 | cp4waiops.setup           | false             |
