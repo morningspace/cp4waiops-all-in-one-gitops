@@ -6,6 +6,7 @@
   - [Prepare Environment](#prepare-environment)
   - [Install CP4WAIOps](#install-cp4waiops)
     - [Installation Parameters](#installation-parameters)
+    - [Install Custom Build](#install-custom-build)
   - [Access Environment](#access-environment)
     - [CP4WAIOps](#cp4waiops)
     - [Robot Shop](#robot-shop)
@@ -110,6 +111,43 @@ Now you can work around, grab some coffee, and wait for the installation to comp
 Depends on the installation parameters that you specified, it usually takes 1 hour to finish the installation of CP4WAIOps, and 10 minutes to finish all the other applications deployment including Rook Ceph, Robot Shop, Humio, Istio, etc. When you see all the applications turn into green, i.e.: `Synced` and `Healthy`, that means CP4WAIOps install is completed!
 
 ![](images/08-install-complete.png)
+
+### Install Custom Build
+
+Locate the file `values.custom-build.yaml` in `config/cp4waiops/3.3/` and set the custom build by modifying `imageCatalog` and `channel` field.
+
+Add image registry credentials to the global image pull secret called `pull-secret` in `openshift-config` namespace.
+
+Then go to Argo CD UI to create the root level application and just fill in the form using the suggested field values listed in below table:
+
+| Field                 | Value                                                 |
+| --------------------- | ----------------------------------------------------- |
+| Application Name      | cp4waiops-demo                                        |
+| Project               | default                                               |
+| Sync Policy           | Automatic                                             |
+| Repository URL        | https://github.com/morningspace/cp4waiops-sandbox     |
+| Revision              | dev                                                   |
+| Path                  | config/all-in-one                                     |
+| Cluster URL           | https://kubernetes.default.svc                        |
+| Namespace             | openshift-gitops                                      |
+
+And set the installation parameters as below:
+
+| Parameter                 | Value             |
+| ------------------------- |-------------------|
+| argocd.cluster            | openshift         |
+| argocd.allowLocalDeploy   | true              |
+| cp4waiops.enabled         | true              |
+| cp4waiops.instanceName    | aiops-installatio |
+| cp4waiops.namespace       | cp4waiops         |
+| cp4waiops.profile         | x-small           |
+| cp4waiops.dockerUsername  | The username to access image registry |
+| cp4waiops.dockerPassword  | The password to access image registry |
+| cp4waiops.setup           | false             |
+| robotshop.enabled         | false             |
+| humio.enabled             | false             |
+| istio.enabled             | false             |
+| rookceph.enabled          | true              |
 
 ## Access Environment
 
