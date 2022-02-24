@@ -52,7 +52,7 @@ cp4waiops:
   # Specify whether or not to install CP4WAIOps.
   enabled: true
 
-  # Specify the version of CP4WAIOps, e.g.: 3.2, 3.3, daily.
+  # Specify the version of CP4WAIOps, e.g.: 3.2, 3.3, custom-build.
   version: "3.2"
 
   # The username of image registry used to pull CP4WAIOps images.
