@@ -52,6 +52,10 @@ cp4waiops:
   # Specify whether or not to install CP4WAIOps.
   enabled: true
 
+  storageClass: rook-cephfs
+
+  storageClassLargeBlock: rook-cephfs
+
   # The instance name of CP4WAIOps.
   instanceName: aiops-installation
 
