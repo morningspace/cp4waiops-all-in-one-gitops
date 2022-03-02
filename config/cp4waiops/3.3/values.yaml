@@ -8,3 +8,4 @@ cp4waiops32:
     dockerPassword: REPLACE_IT
     storageClass: rook-cephfs
     storageClassLargeBlock: rook-cephfs
+    
