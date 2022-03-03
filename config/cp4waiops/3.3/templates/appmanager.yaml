@@ -65,6 +65,19 @@ spec:
   #     kind: EventProcessor
   #     name: aiops-ir-lifecycle
   #     namespace: {{.Values.cp4waiops33.spec.aiManager.namespace}}
+      namespace: {{.Values.cp4waiops33.spec.aiManager.namespace}}
+  - id: aiops-ir-lifecycle-locker
+    patchTemplate: |
+      spec:
+        flink:
+          properties:
+             taskmanager.memory.process.size: "{{.Values.res.irflink.taskmanager.processSize}}"
+    patchType: application/merge-patch+json
+    targetObjectRef:
+      apiVersion: eventprocessing.automation.ibm.com/v1beta1
+      kind: EventProcessor
+      name: aiops-ir-lifecycle
+      namespace: {{.Values.cp4waiops33.spec.aiManager.namespace}}
   serviceAccountRef:
     name: resource-locker-operator-controller-manager
 {{- end }}
