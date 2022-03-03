@@ -52,8 +52,8 @@ cp4waiops:
   # Specify whether or not to install CP4WAIOps.
   enabled: true
 
+  # The storage class used by CP4WAIOps.
   storageClass: rook-cephfs
-
   storageClassLargeBlock: rook-cephfs
 
   # The instance name of CP4WAIOps.

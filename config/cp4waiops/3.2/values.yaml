@@ -6,3 +6,5 @@ cp4waiops32:
       namespace: cp4waiops
     size: small
     dockerPassword: REPLACE_IT
+    storageClass: rook-cephfs
+    storageClassLargeBlock: rook-cephfs

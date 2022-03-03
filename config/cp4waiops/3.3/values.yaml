@@ -1,5 +1,5 @@
 ---
-cp4waiops32:
+cp4waiops33:
   spec:
     aiManager:
       instanceName: aiops-installation
@@ -8,4 +8,3 @@ cp4waiops32:
     dockerPassword: REPLACE_IT
     storageClass: rook-cephfs
     storageClassLargeBlock: rook-cephfs
-    
