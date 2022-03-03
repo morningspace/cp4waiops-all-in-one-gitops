@@ -37,6 +37,10 @@ spec:
               value: '{{ .Values.cp4waiops.dockerPassword }}'
             - name: cp4waiops32.spec.aiManager.instanceName
               value: '{{ .Values.cp4waiops.instanceName }}'
+            - name: cp4waiops32.spec.storageClass
+              value: '{{ .Values.cp4waiops.storageClass }}'
+            - name: cp4waiops32.spec.storageClassLargeBlock
+              value: '{{ .Values.cp4waiops.storageClassLargeBlock }}'
             - name: cp4waiops32.spec.aiManager.namespace
               value: '{{ .Values.cp4waiops.namespace }}'
             {{- if eq .Values.cp4waiops.profile "x-small" }}

@@ -90,6 +90,8 @@ Below table summarizes the detailed meaning for each parameter:
 | argocd.allowLocalDeploy   | bool   | true               | Allow applications to be deployed on the same cluster where Argo CD runs.
 | cp4waiops.enabled         | bool   | true               | Specify whether or not to install CP4WAIOps.
 | cp4waiops.instanceName    | string | aiops-installation | The instance name of CP4WAIOps.
+| cp4waiops.storageClass         | string   | rook-cephfs | The storage class that you want to use
+| cp4waiops.storageClassLargeBlock | string | rook-cephfs | The storage class large blockt that you want to use.
 | cp4waiops.namespace       | string | cp4waiops          | The namespace of CP4WAIOps.
 | cp4waiops.profile         | string | x-small            | The CP4WAIOps deployment profile, e.g.: x-small, small, large.
 | cp4waiops.dockerPassword  | string | n/a                | The password of image registry used to pull CP4WAIOps images. If you install the official CP4WAIOps release, please find your password from [here].
